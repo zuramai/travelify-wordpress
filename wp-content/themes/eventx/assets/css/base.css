@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Muli-Light";
+    src: url('./../fonts/Muli-Light.ttf');
+}
+
+@font-face {
+    font-family: "Muli";
+    src: url('./../fonts/Muli-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Muli-Bold";
+    src: url('./../fonts/Muli-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Chilanka";
+    src: url('./../fonts/Chilanka-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Muli';
+}
+
+.container {
+    width:100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row + .row {
+    margin-bottom: 15px;
+}
+
+[class*="col-"] {
+    padding: 0 15px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.col-1 {flex:none; width: calc(100% / 12 * 1)}
+.col-2 {flex:none; width: calc(100% / 12 * 2)}
+.col-3 {flex:none; width: calc(100% / 12 * 3)}
+.col-4 {flex:none; width: calc(100% / 12 * 4)}
+.col-5 {flex:none; width: calc(100% / 12 * 5)}
+.col-6 {flex:none; width: calc(100% / 12 * 6)}
+.col-7 {flex:none; width: calc(100% / 12 * 7)}
+.col-8 {flex:none; width: calc(100% / 12 * 8)}
+.col-9 {flex:none; width: calc(100% / 12 * 9)}
+.col-10 {flex:none; width: calc(100% / 12 * 10)}
+.col-11 {flex:none; width: calc(100% / 12 * 11)}
+.col-12 {flex:none; width: calc(100% / 12 * 12)}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+    
+    .col-md-1 {flex:none; width: calc(100% / 12 * 1)}
+    .col-md-2 {flex:none; width: calc(100% / 12 * 2)}
+    .col-md-3 {flex:none; width: calc(100% / 12 * 3)}
+    .col-md-4 {flex:none; width: calc(100% / 12 * 4)}
+    .col-md-5 {flex:none; width: calc(100% / 12 * 5)}
+    .col-md-6 {flex:none; width: calc(100% / 12 * 6)}
+    .col-md-7 {flex:none; width: calc(100% / 12 * 7)}
+    .col-md-8 {flex:none; width: calc(100% / 12 * 8)}
+    .col-md-9 {flex:none; width: calc(100% / 12 * 9)}
+    .col-md-10 {flex:none; width: calc(100% / 12 * 10)}
+    .col-md-11 {flex:none; width: calc(100% / 12 * 11)}
+    .col-md-12 {flex:none; width: calc(100% / 12 * 12)}
+
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+    
+    .col-lg-1 {flex:none; width: calc(100% / 12 * 1)}
+    .col-lg-2 {flex:none; width: calc(100% / 12 * 2)}
+    .col-lg-3 {flex:none; width: calc(100% / 12 * 3)}
+    .col-lg-4 {flex:none; width: calc(100% / 12 * 4)}
+    .col-lg-5 {flex:none; width: calc(100% / 12 * 5)}
+    .col-lg-6 {flex:none; width: calc(100% / 12 * 6)}
+    .col-lg-7 {flex:none; width: calc(100% / 12 * 7)}
+    .col-lg-8 {flex:none; width: calc(100% / 12 * 8)}
+    .col-lg-9 {flex:none; width: calc(100% / 12 * 9)}
+    .col-lg-10 {flex:none; width: calc(100% / 12 * 10)}
+    .col-lg-11 {flex:none; width: calc(100% / 12 * 11)}
+    .col-lg-12 {flex:none; width: calc(100% / 12 * 12)}
+
+}
