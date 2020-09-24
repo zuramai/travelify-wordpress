@@ -65,7 +65,9 @@ body {
 .btn-pill {
     border-radius: 50rem;
 }
-
+.float-right {
+    float: right;
+}
 
 .mt-2 {
     margin-top: .5rem !important;

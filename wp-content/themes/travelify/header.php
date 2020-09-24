@@ -6,6 +6,7 @@
     <title>Travelify</title>
     <link rel="stylesheet" href="<?= get_bloginfo('stylesheet_directory') ?>/assets/css/base.css">
     <link rel="stylesheet" href="<?= get_bloginfo('stylesheet_directory') ?>/assets/css/style.css">
+    <?= wp_head() ?>
 </head>
 <body>
     <div id="app">
@@ -13,7 +14,7 @@
             <div class="discount">
                 <div class="container">
                     <p class="text-center">
-                        00:00:00 Left To Get Discount. Get Now!
+                        <?= do_shortcode('[discountCountdown plain-text="true"]') ?> Left To Get Discount. Get Now!
                     </p>
                 </div>
             </div>

@@ -57,4 +57,49 @@
         </div>
     </div>
 </section>
+<section class="section home-articles">
+    <div class="section-header">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 col-12">
+                <h1 class="section-title">Articles</h1>
+                <p class="section-description">Berikut adalah artikel-artikel yang dapat membantu anda dalam memilih tempat wisata.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-body">
+        <div class="container">
+            <div class="row">
+            <?php  
+            $posts = new WP_Query([
+                'post_type' => 'post',
+                'post_per_page' => 3,
+                'orderby' => 'id',
+                'order' => 'desc',
+                'post_status' => 'publish'
+            ]);
+                
+            if($posts->have_posts()) {
+                while($posts->have_posts()) {
+                    $posts->the_post(); ?>
+                        <div class="col-md-4 col-12">
+                            <div class="card">
+                                <a href="<?= get_the_permalink() ?>"><img src="<?= get_the_post_thumbnail_url() ?>" alt="Image for <?= the_title() ?>" class='card-img-top'></a>
+                                <div class="card-body">
+                                    <h3 class="card-title"><a href="<?= get_the_permalink() ?>"><?=  the_title() ?></a></h3>
+                                    <p><?= substr(get_the_excerpt(),50) ?></p>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="article-details">Posted by <?= the_author_posts_link() ?> at <?= the_date() ?></p>
+                                </div>
+                            </div>
+                        </div>
+                <?php }
+            }
+            ?>
+            </div>
+            <a href="<?= get_page_uri(9) ?>" class="float-right mt-5">Lihat artikel lainnya ></a>
+        </div>
+    </div>
+</section>
 <?= get_footer() ?>
